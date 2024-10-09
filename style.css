@@ -21,10 +21,23 @@ body{
 }
 
 .degrade{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0px;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(45deg, #228054, #48509b, #228054, #48509b);
+    background-image: linear-gradient(45deg, #000000, #0b6066, #41135c, #2a19c5);
     background-size: 300% 300%;
     animation: colors 15s ease infinite;
+}
+
+/* --------------------------------------------------------- */
+
+.card-principal{
+    background-color: white;
+    width: 60%;
+    height: 80%;
+    border-radius: 2rem;
+    box-shadow: black 0px 10px 25px 0px;
 }
