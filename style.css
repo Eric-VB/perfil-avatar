@@ -35,9 +35,54 @@ body{
 /* --------------------------------------------------------- */
 
 .card-principal{
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0.50);
     width: 60%;
     height: 80%;
     border-radius: 2rem;
     box-shadow: black 0px 10px 25px 0px;
+}
+
+.estilo-mac{
+    display: flex;
+    gap: 6px;
+    padding: 16px;
+}
+
+.estilo-mac button{
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border-radius: 99px;
+    border: none;
+}
+
+.estilo-mac button:nth-child(1){
+    background-color: red;
+}
+
+.estilo-mac button:nth-child(2){
+    background-color: yellow;
+}
+
+.estilo-mac button:nth-child(3){
+    background-color: green;
+}
+
+.cabecalho-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 35%;
+}
+
+.div-circular{
+    background-color: #41135c;
+    border-radius: 99px;
+    width: 150px;
+    height: 150px;
 }
