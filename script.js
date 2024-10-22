@@ -1,6 +1,9 @@
 const input = document.querySelector('#inputFile');
 const campoImg = document.querySelector('#img');
-let atualizaFoto = 0;
+const elementoDialog = document.querySelector('#dialog');
+
+let atualizaFoto = false;
+
 
 input.addEventListener('change', (event) => {
 
@@ -12,19 +15,22 @@ input.addEventListener('change', (event) => {
 
     campoImg.src = imagem;
 
-    atualizaFoto = 1;
+    atualizaFoto = true;
     
     setTimeout(() => {
-        dialog()
-    }, 2000)
+        openDialog()
+    }, 1500);
 })
 
-function dialog() {
+function openDialog() {
     
-    if(atualizaFoto == 1){
-        atualizaFoto = 0;
+    if(atualizaFoto == true){
+        elementoDialog.show();
+        atualizaFoto = false;
     }
     
-    console.log(atualizaFoto)
-    
+}
+
+function closeDialog(){
+    elementoDialog.close();
 }
