@@ -27,6 +27,7 @@ function openDialog() {
     if(atualizaFoto == true){
         elementoDialog.show();
         atualizaFoto = false;
+        dialog.style.animation = 'slideUp 0.5s ease-out forwards';
     }
     
 }
@@ -34,3 +35,4 @@ function openDialog() {
 function closeDialog(){
     elementoDialog.close();
 }
+  

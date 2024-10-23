@@ -35,15 +35,21 @@
             </div>
 
         </div>
-        <dialog id="dialog">
-            <span>
-                Foto atualizada
-            </span>
-            <button onclick="closeDialog()">
-                <span class="material-symbols-outlined">
-                    check_circle
-                </span>
-            </button>
+        <dialog id="dialog" class="dialog">
+            <div class="conteudoDialog">
+                <div class="areaText">
+                    <span>
+                        Avatar atualizado com sucesso!
+                    </span>
+                </div>
+                <div class="areaButton">
+                    <button onclick="closeDialog()" class="buttonConfirm">
+                        <span class="material-symbols-outlined" id="check_circle">
+                            check_circle
+                        </span>
+                    </button>
+                </div>
+            </div>
         </dialog>
     </div>
     <script src="script.js"></script>
