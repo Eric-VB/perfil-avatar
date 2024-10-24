@@ -9,18 +9,21 @@
 </head>
 <body>
     <div class="degrade">
-        <div class="card-principal">
+        <div class="card-principal" id="cardPrincipal">
+
             <div class="estilo-mac">
                 <button></button>
                 <button></button>
                 <button></button>
             </div>
+
             <div class="cabecalho-card">
                 <div class="div-circular">
                     <img id="img" src="img/perfil-avatar.jpg" alt="">
                 </div>
             </div>
-            <div class="conteudo-card">
+
+            <div class="troca-avatar">
                 <form action="">
                     <div class="alterar-avatar">
                         <label for="inputFile" class="label-input-file">
@@ -34,7 +37,34 @@
                 </form>
             </div>
 
+            <div class="conteudo-card" id="conteudoCard">
+                <div class="card-aviso-tamanho-arquivo">
+                    <div class="conteudo-card-aviso-tamanho">
+                        <div class="campo-titulo-aviso">
+                            <span class="titulo-aviso">
+                                Arquivo muito pesado!
+                            </span>
+                        </div>
+
+                        <div>
+                            <span class="texto-aviso">
+                                O tamanho desse arquivo excede o tamanho máximo permitido!
+                            </span>
+                        </div>
+
+                        <div class="descricao-restricao">
+                            <span class="tamanho-permitido">
+                                Tamanho permitido: 15 KB
+                            </span>
+                            <span id="tamanhoAtual" class="tamanho-atual">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
         <dialog id="dialog" class="dialog">
             <div class="conteudoDialog">
                 <div class="areaText">
@@ -51,6 +81,7 @@
                 </div>
             </div>
         </dialog>
+
     </div>
     <script src="script.js"></script>
 </body>
