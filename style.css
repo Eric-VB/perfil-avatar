@@ -23,6 +23,15 @@
     }
 }
 
+@keyframes slideDown {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(0, 100%);
+    }
+}
+
 body{
     margin: 0px !important;
     padding: 0px !important;
@@ -111,10 +120,6 @@ img{
     height: 100%;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
-}
-
-.alterar-avatar{
-
 }
 
 .label-input-file{

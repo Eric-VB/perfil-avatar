@@ -31,7 +31,13 @@ function openDialog() {
     }
 
     setTimeout(() => {
-        closeDialog()
+        
+        elementoDialog.style.animation = 'slideDown 0.5s ease-out';
+        
+        setTimeout(() => {
+            closeDialog();
+        }, 500);
+
     }, 5000);
     
 }
