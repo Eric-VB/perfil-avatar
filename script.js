@@ -70,6 +70,11 @@ function openDialog() {
 }
 
 function closeDialog(){
-    elementoDialog.close();
+    elementoDialog.style.animation = 'slideDown 0.5s ease-out';
+
+    setTimeout(() => {
+        elementoDialog.close();
+    }, 500);
+
 }
   
