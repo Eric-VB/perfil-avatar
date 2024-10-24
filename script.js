@@ -27,8 +27,12 @@ function openDialog() {
     if(atualizaFoto == true){
         elementoDialog.show();
         atualizaFoto = false;
-        dialog.style.animation = 'slideUp 0.5s ease-out';
+        elementoDialog.style.animation = 'slideUp 0.5s ease-out';
     }
+
+    setTimeout(() => {
+        closeDialog()
+    }, 5000);
     
 }
 
