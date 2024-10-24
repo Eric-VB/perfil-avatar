@@ -22,36 +22,39 @@ let atualizaFoto = false;
 
 input.addEventListener('change', (event) => {
 
-    let fileInput =  event.target.files[0];
-
-    let fileTamanho = fileInput.size;
-    let fileTamanhoKB = (fileTamanho / 1024).toFixed(2);
-    
-    if(fileTamanhoKB > 15){
-
-        cardPrincipal.style.height = '70%';
-
-        conteudoCard.style.display = 'flex';
-
-        tamanhoAtual.textContent = `Tamanho do arquivo selecionado ${fileTamanhoKB} KB`;
-    
-    } else {
-
-        let imagem = URL.createObjectURL(fileInput);
-    
-        campoImg.src = imagem;
-    
-        atualizaFoto = true;
+    if(input.files.length > 0){
         
-        setTimeout(() => {
-            openDialog()
-        }, 1500);
-
-        cardPrincipal.style.height = 'auto';
-
-        conteudoCard.style.display = 'none';
-
-        console.log(fileTamanhoKB)
+        let fileInput =  event.target.files[0];
+    
+        let fileTamanho = fileInput.size;
+        let fileTamanhoKB = (fileTamanho / 1024).toFixed(2);
+        
+        if(fileTamanhoKB > 15){
+    
+            cardPrincipal.style.height = '70%';
+    
+            conteudoCard.style.display = 'flex';
+    
+            tamanhoAtual.textContent = `Tamanho do arquivo selecionado ${fileTamanhoKB} KB`;
+        
+        } else {
+    
+            let imagem = URL.createObjectURL(fileInput);
+        
+            campoImg.src = imagem;
+        
+            atualizaFoto = true;
+            
+            setTimeout(() => {
+                openDialog()
+            }, 1500);
+    
+            cardPrincipal.style.height = 'auto';
+    
+            conteudoCard.style.display = 'none';
+    
+            console.log(fileTamanhoKB)
+        }
     }
 })
 
@@ -69,13 +72,7 @@ function openDialog() {
     }
 
     setTimeout(() => {
-        
-        elementoDialog.style.animation = 'slideDown 0.5s ease-out';
-        
-        setTimeout(() => {
-            closeDialog();
-        }, 500);
-
+        closeDialog();
     }, 5000);
     
 }
